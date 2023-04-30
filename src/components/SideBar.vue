@@ -120,10 +120,12 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .Rectangle-11 {
+  box-sizing: border-box;
+  /* width: 20%; */
   width: 230px;
+  /* max-width: 230px; */
   min-height: 100vh;
   height: 100%;
-  margin: 0 25px 0 0;
   padding: 30px 0 10px;
   background-image: radial-gradient(
     circle at 29% 0,
@@ -198,6 +200,7 @@ export default defineComponent({
 
 .v-collapse {
   transition: height var(--vc-auto-duration) cubic-bezier(0.33, 1, 0.68, 1);
+  background-color: var(--dark-blue-grey);
 }
 ul {
   list-style-type: none;

@@ -1,26 +1,30 @@
 <template>
-  <div class="sidebar">
-    <img />
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-
-    <h3>Essential Links</h3>
-
-    <h3>Ecosystem</h3>
+  <div class="main">
+    <h1 class="main__title">Проведение ТО и мелкий ремонт</h1>
+    <div class="main__links">
+      <a class="main__link">Общее</a>
+      <a class="main__link main__link_active">Товар списания</a>
+      <a class="main__link">Доп. расходы</a>
+      <span class="main__gear"></span>
+    </div>
+    <div class="main__add-section">
+      <button class="main__add-button">
+        <span class="main__add-plus"></span>Добавить строку
+      </button>
+    </div>
+    <div class="main__content">
+      <div class="main__content-header">
+        <p class="main__content-heading">Сохранить изменения</p>
+        <span class="main__gear"></span>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
 export default defineComponent({
-  name: "HelloWorld",
+  name: "MainWindow",
   props: {
     msg: String,
   },
@@ -29,18 +33,37 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.main {
+  background-color: #fbfcfd;
+  width: calc(100% - 255px);
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.main__title {
+  /* font-family: MyriadPro; */
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black);
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.main__links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
-a {
-  color: #42b983;
+.main__link {
+  /* font-family: MyriadPro; */
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--light-navy);
+}
+.main__link_active {
+  color: var(--black);
 }
 </style>
